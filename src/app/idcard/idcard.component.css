@@ -1,0 +1,15 @@
+.main{
+    background-color: aqua;
+    height:60% ;
+    width:30% ;
+
+}
+.name{
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    background-color: aquamarine;
+}
+/* .button{
+
+} */

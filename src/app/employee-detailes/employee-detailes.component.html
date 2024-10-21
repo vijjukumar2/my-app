@@ -1,0 +1,36 @@
+<div class="top">
+    <button (click)="create()">Create employee</button>
+    <button>Display</button>
+   
+    <button (click)="hike()">20%hike</button>
+    <button>user name</button>
+    <button (click)="packageLH()">packageLH</button>
+    <button (click)="packageHL()">packageHL</button>
+    <button>packageLH</button>
+    <button>experienceLH</button>
+    <button>experienceHL</button>
+    <button>expendenture button</button>
+    <button (click)="total()">total employee button</button>
+    <br><br><br>
+
+<label for="">name</label>
+<input type="text" [(ngModel)]="name"><br>
+<label for="">experience</label>
+<input type="number" [(ngModel)]="experience"><br>
+<label for="">package</label>
+<input type="number" [(ngModel)]="package"><br>
+<label for="">role</label>
+<input type="text" [(ngModel)]="role"><br><br><br>
+</div>
+
+<div class="bottom">
+
+<div class="first"  *ngFor="let employee of employees let i=index">
+    <h4>Empl:{{i+1}}</h4>
+    <h4>name:{{employee.name}}</h4>
+    <h4>experience:{{employee.experience}}</h4>
+    <h4>package:{{employee.package}}</h4>
+    <h4>role:{{employee.role}}</h4>
+    <button (click)="delete(i)">Delete</button>
+</div>
+</div>

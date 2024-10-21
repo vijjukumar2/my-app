@@ -1,0 +1,12 @@
+.rectangle{
+    padding:10%;
+    background-color: white;
+    width: 40%;
+    height: 30%;
+    margin-left: 20%;
+}
+.button{
+    background-color: blue;
+    color: white;
+    margin: 6px;
+}

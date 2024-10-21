@@ -1,0 +1,46 @@
+
+<h1>Event Regestration</h1>
+<label for="">Name:</label>
+<input type="text" [(ngModel)]="name">
+<button (click)="submit()">submit</button>
+
+<h1>Regestred Users</h1>
+
+<ul>
+    <li *ngFor="let name of names">{{name}}</li>
+</ul>
+
+<button (click)="delete()">Delete</button> <hr>
+
+<h1>Student Regestration</h1>
+<label for="">Name</label>
+<input type="text" [(ngModel)]="studentname">
+<label for="">Age</label>
+<input type="number" [(ngModel)]="studentage">
+<label for="">marks</label>
+<input type="number" [(ngModel)]="marks">
+
+<button (click)="create()">create</button>
+
+<h1>Total Students</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{student.name}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.marks}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+    
+
+<button (click)="remove()">delete</button>

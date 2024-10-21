@@ -1,0 +1,88 @@
+<p>duplicate-user works!</p>
+<form action="" [formGroup]="duplicateForm">
+    <label for="">name:</label>
+    <input type="text" formControlName="name">
+    <br>
+    <label for="">class:</label>
+    <input type="text" formControlName="class">
+    <div *ngIf="duplicateForm.get('class')?.touched && duplicateForm.get('class')?.invalid">
+        <p class="error" *ngIf="duplicateForm.get('class')?.errors?.['required']">class is required</p>
+        <p class="error" *ngIf="duplicateForm.get('class')?.errors?.['min']">class min 0  </p>
+        <p class="error" *ngIf="duplicateForm.get('class')?.errors?.['max']">class is max 10</p>
+    </div>
+    <br>
+    <label for="">Father Name:</label>
+    <input type="text" formControlName="fathername">
+    <br>
+    <label for="">Email:</label>
+    <input type="text" formControlName="email">
+    <div  *ngIf="duplicateForm.get('email')?.touched && duplicateForm.get('email')?.invalid">
+        <p class="error" *ngIf="duplicateForm.get('email')?.errors?.['required']">mail is required</p>
+
+    </div>
+    <br>
+    <label for="">DoB:</label>
+    <input type="month" formControlName="dob">
+
+    <div formGroupName="address">
+        
+        <label for="">addressline:</label>
+        <input type="text" formControlName="addressline">
+        <br>
+        <label for="">city:</label>
+        <input type="text" formControlName="city">
+        <br>
+        <label for="">state:</label>
+        <input type="text" formControlName="state">
+        <div  *ngIf="duplicateForm.get('address')?.get('state') ?.touched && duplicateForm.get('address')?.invalid">
+            <p class="error" *ngIf="duplicateForm.get('address')?.get('state')?.errors?.['required']">state is required</p>
+    
+        </div>
+        
+        <br>
+        <label for="">pincode:</label>
+        <input type="number" formControlName="pincode">
+    </div>
+    <div formGroupName="company">
+        <label for="">Name:</label>
+        <input type="text" formControlName="name">
+        <br>
+        <label for="">package:</label>
+        <input type="text" formControlName="package">
+        <div  *ngIf="duplicateForm.get('company')?.get('package') ?.touched && duplicateForm.get('company')?.invalid">
+            <p class="error" *ngIf="duplicateForm.get('company')?.get('package')?.errors?.['required']">package is required</p>
+            <p class="error" *ngIf="duplicateForm.get('company')?.get('package')?.errors?.['min']">package is minimum 10LPA</p>
+            <p class="error" *ngIf="duplicateForm.get('company')?.get('package')?.errors?.['max']">package is Maximum 25LPA</p>
+        </div>
+
+        
+        <br>
+    </div>
+    <label for="">marks</label>
+    <button (click)="addmarks()">addmarks</button>
+
+    <div formArrayName="marks">
+        <div *ngFor="let mark of marksFormArrey.controls; let i=index">
+            <div formGroupName="{{i}}">
+    
+                 <h2>marks {{i+1}}</h2>
+                <label for="">class:</label>
+                <input type="text" formControlName="class">
+                <br>
+                <label for="">year:</label>
+                <input type="month" formControlName="year">
+                <br>
+                <label for="">percentage:</label>
+                <input type="number" formControlName="percentage">
+                <div *ngIf="marksFormArrey.controls[i]?.get('percentage')?.touched && marksFormArrey.controls[i]?.get('percentage')?.invalid">
+                    <p class="error" *ngIf="marksFormArrey.controls[i]?.get('percentage')?.errors?.['required']">percentage is required</p>
+                    <p class="error" *ngIf="marksFormArrey.controls[i]?.get('percentage')?.errors?.['min']">percentage is minimum 0</p>
+                    <p class="error" *ngIf="marksFormArrey.controls[i]?.get('percentage')?.errors?.['max']">percentage is maximum 100</p>
+                 </div>
+               <br> <br> <br>
+             </div>
+        </div>
+    </div> 
+    <button (click)="submit()">submit</button>
+
+</form>

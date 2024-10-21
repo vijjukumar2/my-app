@@ -1,0 +1,25 @@
+<p>idcard works!</p>
+<div class="main">
+  <div class="name">
+    <h1>Name</h1>
+  </div>
+
+   <div class="middle" *ngFor="let idcard of idcards",>
+    <h3>Name:{{idcard.name}}</h3>
+    <h3>phone:{{idcard.phone}}</h3>
+    <h3>DoB:{{idcard.city}}</h3>
+    <h3>city:{{idcard.dob}}</h3>
+    <h3>Email:{{idcard.email}}</h3>
+  </div>
+  <div class="bottom">
+    <!-- <h3>School city:{{idcard.city}}</h3>
+      <h3>School pin:{{idcard.pin}}</h3> -->
+    <button>view</button>
+    <button>Edit</button>
+    <!-- <button (click)="delete(i)">Delete</button> -->
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,45 @@
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+     margin: 25px 0; 
+    font-size: 1em;
+    text-align: left;
+}
+
+table th, .styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table tr {
+    transition: background-color 0.3s;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover { 
+    background-color: #ddd;
+}
+
+.main{
+   
+} 
+.flipcartpart{
+  padding: 40px;
+
+}
+.total{
+    display: flex;
+    background-color: #4CAF50;
+    
+    
+}

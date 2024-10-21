@@ -1,0 +1,83 @@
+
+<!-- <input type="text" placeholder="search" [(ngModel)]="term"] (keyup)="search()"> -->
+
+
+
+
+<h1 style="text-align: center;">Flipcart</h1>
+<div class="total">
+      <div class="main">
+<!-- 
+        <select [(ngModel)]="category" (change)="categoryChange()">
+            <option>gadgets</option>
+            <option>fashion</option>
+            <option>footware</option>
+            <option>accessories</option> 
+        </select> -->
+        
+        <input type="text" placeholder="search" [(ngModel)]="term" (keyup)="search()">
+        <button style="background-color: blue; color: white;">only Freedelivery</button><br><br>
+        
+        <button style="background-color: yellow;color: black;"  (click)="pricelh()">price low to high</button>
+        <button style="background-color: yellow;color: black;"(click)="pricehl()">price high to low</button>
+        <button style="background-color: yellow;color: black;"(click)="pricelh()">rating low to high</button>
+        <button style="background-color: yellow;color: black;"(click)="pricehl()">rating high to low</button><br><br>
+
+        <button (click)="add20()">add 20 delivery charges</button>
+        <button (click)="discount()">50% discount</button><br><br>
+        
+        
+        <button style="background-color: rgb(93, 138, 138); color: white;" (click)="totalprice()">Total cart price</button> <br><br>   
+        <p>Total Card Items: <mark>{{products.length}}</mark></p>
+    </div>
+
+        <div class="flipcartpart">
+            <label for="">Name</label>
+            <input type="text" [(ngModel)]="name"><br>
+            <label for="">price</label>
+            <input type="number" [(ngModel)]="price"><br>
+            <label for="">Rating</label>
+            <input type="number" [(ngModel)]="rating"><br>
+            <label for="">Free Delivery:</label>
+            
+            <label for="">Yes</label>
+            <input type="radio" name="fd" value="true" [(ngModel)]="freedelivery">
+            <label for="">No</label>
+            <input type="radio" name="fd" value="false" [(ngModel)]="freedelivery"><br><br>
+            <button style="background-color: green; color: white;"(click)="addcart()">Add to cart</button><br><br>
+            
+        </div>
+    </div>
+
+      <div class="table">
+        <table border="1 px">
+            <thead>
+                <tr>
+                    <th>sno</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Rating</th>
+                    <th>freedelivery</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products  let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.category}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.rating}}</td>
+                    <td>{{product.freedelivery}}</td>
+                    
+                    <td>
+                        <button (click)="delete(i)">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+    

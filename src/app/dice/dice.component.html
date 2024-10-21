@@ -1,0 +1,32 @@
+
+
+<!-- <img src="/assets/download1.png" alt="">
+<img src="/assets/images2.png" alt="">
+<img src="/assets/download3.png" alt="">
+<img src="/assets/images4.png" alt="">
+<img src="/assets/download5.png" alt="">
+<img src="/assets/images6.png" alt=""> -->
+
+<div style="text-align: center; margin-top: 50px;">
+    <h1>Dice Roller</h1>
+
+    
+    <div style="margin: 20px;">
+      <!-- <img [src] = "'assets/dice' +result + '.png'" alt="Dice"  style="width: 100px; height: 100px;"> -->
+       
+      <img src="/assets/dice1.png" alt="" height="100px" , width="100px" *ngIf="result===1" >
+      <img src="/assets/dice2.png" alt="" height="100px" , width="100px" *ngIf="result===2" >
+      <img src="/assets/dice3.png" alt="" height="100px" , width="100px" *ngIf="result===3" >
+      <img src="/assets/dice4.png" alt="" height="100px" , width="100px" *ngIf="result===4" >
+    </div>
+    <button (click)="rollDice()" style="font-size: 20px; padding: 10px 20px;">
+      Play
+    </button>
+
+    
+  </div>
+  
+
+
+
+

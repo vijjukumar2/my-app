@@ -1,0 +1,25 @@
+
+table {
+    width: 100%; /* Full-width table */
+    border-collapse: collapse; /* Collapse borders */
+    margin: 20px 0; /* Margin around the table */
+    background-color: aqua;
+}
+
+table th, .table td {
+    padding: 15px; /* Cell padding */
+    text-align: left; /* Text alignment */
+    border: 1px solid #ccc; /* Cell border */
+}
+
+table thead {
+    background-color: #f2f2f2; /* Light header background */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+table tr:hover {
+    background-color: #e0e0e0; /* Highlight row on hover */
+}
